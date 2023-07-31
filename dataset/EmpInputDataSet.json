@@ -1,0 +1,49 @@
+{
+	"name": "EmpInputDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InputStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "AllEmpData.csv",
+				"folderPath": "input",
+				"container": "personalcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "EmpId",
+				"type": "String"
+			},
+			{
+				"name": "EmpName",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			},
+			{
+				"name": "Department",
+				"type": "String"
+			},
+			{
+				"name": "salary",
+				"type": "String"
+			}
+		]
+	}
+}
